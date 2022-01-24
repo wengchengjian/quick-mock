@@ -1,0 +1,1 @@
+#org.springframework.context.ApplicationListener=com.mock.interfaces_service.listener.ApplicationStartedCompletedListener

@@ -1,1 +1,18 @@
-
+server:
+  port: 8005
+spring:
+  application:
+    name: roleservice
+  datasource:
+    url: jdbc:mysql://rm-bp1y97h63mw7r2tp01o.mysql.rds.aliyuncs.com:3306/quick_mock
+    username: wengchengjian
+    password: Wengchengjian+1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: localhost:8849
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl

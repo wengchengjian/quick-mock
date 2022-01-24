@@ -1,6 +1,10 @@
 package com.mock.api.client;
 
+import com.mock.api.entity.Project;
+import com.mock.api.entity.SysUser;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @Author 翁丞健
@@ -8,6 +12,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @Version 1.0.0
  */
 @FeignClient(value = "userservice")
-public class UserClient {
-
+public interface UserClient {
+    @GetMapping("/user/{id}")
+    SysUser findById(@PathVariable("id") Long userId);
 }
